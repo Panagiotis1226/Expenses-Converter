@@ -1,6 +1,6 @@
 # Converter and Expense Tracker App
 
-TestExam is an Android application that provides two main functionalities: a unit converter and an expense tracker.
+This is an Android application needed for one of my courses, that provides two main functionalities: a unit converter and an expense tracker.
 
 ## Features
 
