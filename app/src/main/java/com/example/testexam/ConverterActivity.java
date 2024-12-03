@@ -17,6 +17,9 @@ public class ConverterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
 
+        // Enable the up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         etFeet = findViewById(R.id.etFeet);
         etInches = findViewById(R.id.etInches);
         btnConvert = findViewById(R.id.btnConvert);
@@ -28,6 +31,12 @@ public class ConverterActivity extends AppCompatActivity {
                 convertValues();
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     private void convertValues() {

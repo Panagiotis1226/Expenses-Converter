@@ -18,6 +18,9 @@ public class ExpenseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense);
 
+        // Enable the up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         etExpenseName = findViewById(R.id.etExpenseName);
         etCategory = findViewById(R.id.etCategory);
         etAmount = findViewById(R.id.etAmount);
@@ -31,6 +34,12 @@ public class ExpenseActivity extends AppCompatActivity {
                 saveExpense();
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     private void saveExpense() {
